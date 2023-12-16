@@ -3436,7 +3436,7 @@ z_index = 0
 y_sort_enabled = false
 position = Vector2(117, 70)
 script = ExtResource("8_16j2k")
-speed = null
+speed = 100
 
 [node name="Smoother" type="Node" parent="."]
 script = ExtResource("8_iraam")
