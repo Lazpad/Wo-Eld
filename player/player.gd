@@ -4,6 +4,7 @@ extends CharacterBody2D
 @onready var animations =  $AnimationPlayer
 @onready var sounds = $AudioStreamPlayer2D
 @onready var playersprite = Sprite2D
+@onready var particleEmitter = CPUParticles2D
 
 func handleInput():
 	var moveDirection = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
@@ -28,6 +29,13 @@ func updateAnimation():
 		
 		animations.play("walk" + direction)
 	
+
+#func sprintEmitter():
+#	if animations.speed_scale == 2:
+#		particleEmitter.show()
+#	else:
+#		particleEmitter.hide()
+
 func hotKeys():
 	if Input.is_action_pressed("escape"): #Will quit game if pressed
 		get_tree().quit()
@@ -37,3 +45,4 @@ func _physics_process(delta):
 	move_and_slide()
 	updateAnimation()
 	hotKeys()
+	#sprintEmitter()
