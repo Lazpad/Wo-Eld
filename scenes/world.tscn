@@ -1,3 +1,4 @@
+[gd_scene load_steps=17 format=3 uid="uid://dnbvpc0x1pvjn"]
 [gd_scene load_steps=18 format=3 uid="uid://dnbvpc0x1pvjn"]
 
 [ext_resource type="PackedScene" uid="uid://crh8eony8kvau" path="res://player/player.tscn" id="1_xjmao"]
@@ -7,6 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://cyq7xynypu4v6" path="res://art/animated_flower.png" id="4_rv7fw"]
 [ext_resource type="Texture2D" uid="uid://bpvxhtqxyksl0" path="res://art/TilesetWater.png" id="5_lkguj"]
 [ext_resource type="Texture2D" uid="uid://d3duos3mkec3l" path="res://art/water_animated.png" id="6_rt6v1"]
+[ext_resource type="Script" path="res://player/player.gd" id="8_16j2k"]
+[ext_resource type="Script" path="res://smoother.gd" id="8_iraam"]
 [ext_resource type="Script" path="res://scenes/follow cam.gd" id="8_5dwkq"]
 [ext_resource type="PackedScene" uid="uid://j7q1v3n3cmel" path="res://enemies/cyclops.tscn" id="9_y8bbw"]
 [ext_resource type="PackedScene" uid="uid://bq2yi4wt8fgaf" path="res://gui/hearts_container.tscn" id="10_44thx"]
@@ -3493,6 +3496,11 @@ layer_5/tile_data = PackedInt32Array(-1048501, 65541, 1, -982965, 65541, 1, -982
 z_index = 0
 y_sort_enabled = false
 position = Vector2(117, 70)
+script = ExtResource("8_16j2k")
+speed = 100
+
+[node name="Smoother" type="Node" parent="."]
+script = ExtResource("8_iraam")
 
 [node name="follow cam" type="Camera2D" parent="Player" node_paths=PackedStringArray("tilemap")]
 script = ExtResource("8_5dwkq")
